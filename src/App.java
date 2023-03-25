@@ -1,17 +1,22 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        String nomeCompleto = soma("Johnatan", "Augusto");
-        System.out.println("Meu nome completo é: " + nomeCompleto);
+        String nomeCompleto = somar("Johnatan", "Augusto");
+        imprimir("Meu nome completo é: " + nomeCompleto);
         
-        int resultadoSoma = soma(2, 3);
-        System.out.println("O resultado da soma é: " + resultadoSoma);
+        int resultadoSoma = somar(2, 3);
+        imprimir("O resultado da soma é: " + resultadoSoma);
     }
 
-    public static int soma(int a, int b){
+    public static int somar(int a, int b){
         return a + b;
     }
-    public static String soma(String a, String b){
+    
+    public static String somar(String a, String b){
         return a.concat(" " + b);
+    }
+
+    public static void imprimir(String texto) {
+        System.out.println(texto);
     }
 }
