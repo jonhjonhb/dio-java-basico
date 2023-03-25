@@ -38,12 +38,20 @@ public class SmartTv {
     }
 
     public void aumentarCanal() {
-        canal++;
-        System.out.println("Canal alterado para: " + canal);
+        if (ligada) {
+            canal++;
+            System.out.println("Canal alterado para: " + canal);
+        } else {
+            System.out.println("Não foi possivel alterar o canal, primeiro ligue a TV.");
+        }
     }
 
     public void diminuirCanal() {
-        canal--;
-        System.out.println("Canal alterado para: " + canal);
+        if (ligada) {
+            canal--;
+            System.out.println("Canal alterado para: " + canal);
+        } else {
+            System.out.println("Não foi possivel alterar o canal, primeiro ligue a TV.");
+        }
     }
 }
