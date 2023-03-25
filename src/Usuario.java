@@ -1,7 +1,8 @@
 public class Usuario {
     public static void main(String[] args) {
         SmartTv tv = new SmartTv();
-
+        
+        tv.aumentarVolume();
         System.out.println("TV está Ligada ? " + tv.ligada);
         System.out.println("Canal Atual : " + tv.canal);
         System.out.println("Volume Atual : " + tv.volume);

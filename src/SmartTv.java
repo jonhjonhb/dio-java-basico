@@ -16,8 +16,12 @@ public class SmartTv {
     }
 
     public void aumentarVolume(int valor) {
-        volume += valor;
-        System.out.println("Aumentando o volume para: " + volume);
+        if (ligada) {
+            volume += valor;
+            System.out.println("Aumentando o volume para: " + volume);
+        } else {
+            System.out.println("Não foi possivel aumentar o volume, primeiro ligue a TV.");
+        }
     }
 
     public void diminuirVolume() {
@@ -25,8 +29,12 @@ public class SmartTv {
     }
 
     public void diminuirVolume(int valor) {
-        volume -= valor;
-        System.out.println("Diminuindo o volume para: " + volume);
+        if (ligada) {
+            volume -= valor;
+            System.out.println("Diminuindo o volume para: " + volume);
+        } else {
+            System.out.println("Não foi possivel diminuir o volume, primeiro ligue a TV.");
+        }
     }
 
     public void aumentarCanal() {
